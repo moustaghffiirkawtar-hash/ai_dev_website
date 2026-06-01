@@ -1,7 +1,7 @@
 import "./App.css";
-import Home from "./components/Home.jsx";
-import UpcomingEvents from "./components/UpcomingEvents.jsx";
-import ListOfMembers from "./components/ListeOfMembers.jsx";
+import Home from "./pages/Home.jsx";
+import UpcomingEvents from "./pages/UpcomingEvents.jsx";
+import ListOfMembers from "./pages/ListeOfMembers.jsx";
 function App() {
   return (
     <>
