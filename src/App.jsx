@@ -1,17 +1,26 @@
 import "./index.css";
-import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom";
+import { BrowserRouter, Routes, Route, NavLink, Link } from "react-router-dom";
 import Home from "./pages/Home.jsx";
 import UpcomingEvents from "./pages/UpcomingEvents.jsx";
 import ListOfMembers from "./pages/ListeOfMembers.jsx";
-
+import Contact from "./pages/Contact.jsx";
+import PastEvents from "./pages/PastEvents.jsx";
+import Button from "./components/Button.jsx";
+import About from './pages/About'; 
 const routes = [
+
   { path: "/", text: "Home", component: Home },
+  { path: "/About", text: "About", component: About },
+  { path: "/ListOfMembers", text: "List Of Members", component: ListOfMembers },
   {
     path: "/UpcomingEvents",
     text: "Upcoming Events",
-    component: UpcomingEvents,
+    component: UpcomingEvents,  
   },
-  { path: "/ListOfMembers", text: "List Of Members", component: ListOfMembers },
+  { path: "/PastEvents", text: "PastEvents", component: PastEvents },
+
+{ path: "/Contact", text: "Contact", component: Contact },
+  { path: "https://docs.google.com/forms/d/e/1FAIpQLSdu_abXzvs4gCvMcGVI3BvOTdo4Sn_tCop03G0CrhUkmEHYJA/viewform?urp=gmail_link", text: "join us", component: "" },
 ];
 
 function App() {
