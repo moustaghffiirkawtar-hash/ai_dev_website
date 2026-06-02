@@ -1,24 +1,67 @@
-import { clubInfo } from '../data/clubData';
+import { clubInfo } from "../data/clubData";
 
 export default function PastEvents() {
   return (
-    <div className="max-w-6xl mx-auto px-4 py-10">
-      <h1 className="text-4xl font-extrabold text-center mb-4 text-slate-800">Nos Réalisations & Événements Passés</h1>
-      <p className="text-center text-slate-600 mb-12 max-w-2xl mx-auto">Une première année marquante caractérisée par une augmentation rapide de nos effectifs et des réalisations notables.</p>
-      
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {clubInfo.pastEvents.map(event => (
-          <div key={event.id} className="bg-white p-6 rounded-2xl shadow-md hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-slate-100 flex flex-col">
-            <div className="mb-4">
-              <h2 className="text-xl font-bold text-slate-800 mb-2">{event.title}</h2>
-              <span className="inline-block bg-gradient-to-r from-cyan-100 to-blue-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-bold">
-                📅 {event.date}
-              </span>
+    <div className="container py-5">
+      {/* Header Section */}
+      <div className="text-center mb-5">
+        <h1 className="display-4 fw-bold text-dark mb-3">
+          Our Achievements & Past Events
+        </h1>
+        <p className="lead text-muted mx-auto" style={{ maxWidth: "700px" }}>
+          A remarkable first year characterized by rapid membership growth and
+          notable achievements.
+        </p>
+      </div>
+
+      {/* Events Grid */}
+      <div className="row g-4">
+        {clubInfo.pastEvents.map((event) => (
+          <div key={event.id} className="col-md-6 col-lg-4">
+            {/* Interactive Card */}
+            <div
+              className="card h-100 border-0 shadow-sm event-card"
+              style={{
+                transition: "all 0.4s ease",
+                cursor: "pointer",
+                overflow: "hidden",
+              }}
+            >
+              <div className="card-body d-flex flex-column p-4">
+                {/* Date Badge */}
+                <span
+                  className="badge rounded-pill bg-light text-primary fs-6 mb-3 align-self-start"
+                  style={{ fontWeight: "600" }}
+                >
+                  📅 {event.date}
+                </span>
+
+                {/* Title */}
+                <h2 className="h4 fw-bold text-dark mb-3">{event.title}</h2>
+
+                {/* Description */}
+                <p className="card-text text-muted small flex-grow-1">
+                  {event.description}
+                </p>
+              </div>
             </div>
-            <p className="text-slate-600 text-sm leading-relaxed flex-grow">{event.description}</p>
           </div>
         ))}
       </div>
+
+      {/* Custom CSS for Hover Effect (Injected) */}
+      <style>
+        {`
+          .event-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+            border-color: #0d6efd !important;
+          }
+          .event-card:hover .card-body {
+            background-color: #f8f9fa;
+          }
+        `}
+      </style>
     </div>
   );
 }
