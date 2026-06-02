@@ -1,111 +1,119 @@
 :root {
-  --text: #6b6375;
-  --text-h: #08060d;
-  --bg: #fff;
-  --border: #e5e4e7;
-  --code-bg: #f4f3ec;
-  --accent: #aa3bff;
-  --accent-bg: rgba(170, 59, 255, 0.1);
-  --accent-border: rgba(170, 59, 255, 0.5);
-  --social-bg: rgba(244, 243, 236, 0.5);
-  --shadow:
-    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
-
-  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --mono: ui-monospace, Consolas, monospace;
-
-  font: 18px/145% var(--sans);
-  letter-spacing: 0.18px;
-  color-scheme: light dark;
-  color: var(--text);
-  background: var(--bg);
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
-  @media (max-width: 1024px) {
-    font-size: 16px;
-  }
+  --club-teal: #3f89a7c0;
+  --club-teal-border: #1e777a;
+  --club-blue: #2d5391;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --text: #9ca3af;
-    --text-h: #f3f4f6;
-    --bg: #16171d;
-    --border: #2e303a;
-    --code-bg: #1f2028;
-    --accent: #c084fc;
-    --accent-bg: rgba(192, 132, 252, 0.15);
-    --accent-border: rgba(192, 132, 252, 0.5);
-    --social-bg: rgba(47, 48, 58, 0.5);
-    --shadow:
-      rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
-  }
-
-  #social .button-icon {
-    filter: invert(1) brightness(2);
-  }
+/* Navbar */
+.club-navbar {
+  background-color: #2d5391 !important;
+  padding: 0.6rem 0;
 }
 
-body {
-  margin: 0;
+.club-navbar .navbar-brand {
+  color: #fff !important;
+  font-weight: 600;
 }
 
-#root {
-  width: 1126px;
-  max-width: 100%;
-  margin: 0 auto;
+.club-navbar .nav-link {
+  color: rgba(255, 255, 255, 0.85) !important;
+  transition: color 0.15s ease;
+}
+
+.club-navbar .nav-link:hover,
+.club-navbar .nav-link.active {
+  color: #fff !important;
+  text-decoration: underline;
+}
+
+/* Member cards */
+.member-card {
+  background-color: #3f89a7c0;
+  border-radius: 20px !important;
+  cursor: pointer;
   text-align: center;
-  border-inline: 1px solid var(--border);
-  min-height: 100svh;
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
+  padding: 14px;
+  transition: transform 0.2s ease;
 }
 
-h1,
-h2 {
-  font-family: var(--heading);
-  font-weight: 500;
-  color: var(--text-h);
+.member-card:hover {
+  transform: scale(1.03);
 }
 
-h1 {
-  font-size: 56px;
-  letter-spacing: -1.68px;
-  margin: 32px 0;
-  @media (max-width: 1024px) {
-    font-size: 36px;
-    margin: 20px 0;
-  }
+.member-avatar {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  border: 3px solid #1e777a;
+  object-fit: cover;
+  margin-bottom: 0.75rem;
 }
-h2 {
-  font-size: 24px;
-  line-height: 118%;
-  letter-spacing: -0.24px;
-  margin: 0 0 8px;
-  @media (max-width: 1024px) {
-    font-size: 20px;
-  }
+
+.member-name {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #2d5391;
+  margin-bottom: 0.2rem;
 }
-p {
+
+.member-role {
+  font-size: 0.875rem;
+  color: #fff;
   margin: 0;
 }
 
-code,
-.counter {
-  font-family: var(--mono);
-  display: inline-flex;
-  border-radius: 4px;
-  color: var(--text-h);
+/* ── Extra large screens (≥1400px) ── */
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+
+  .member-avatar {
+    height: 120px;
+    width: 120px;
+  }
+
+  .member-name {
+    font-size: 1.1rem;
+  }
+
+  .member-role {
+    font-size: 0.95rem;
+  }
 }
 
-code {
-  font-size: 15px;
-  line-height: 135%;
-  padding: 4px 8px;
-  background: var(--code-bg);
+/* ── Mobile (≤576px) ── */
+@media (max-width: 576px) {
+  .club-navbar .navbar-brand {
+    font-size: 0.95rem;
+  }
+
+  .club-navbar .navbar-brand img {
+    width: 28px !important;
+    height: 28px !important;
+  }
+
+  .club-navbar .navbar-nav {
+    flex-direction: column !important;
+    gap: 0 !important;
+    padding: 0.4rem 0;
+  }
+
+  .member-card {
+    border-radius: 14px !important;
+    padding: 10px;
+  }
+
+  .member-avatar {
+    height: 80px;
+    width: 80px;
+  }
+
+  .member-name {
+    font-size: 0.88rem;
+  }
+
+  .member-role {
+    font-size: 0.78rem;
+  }
 }
