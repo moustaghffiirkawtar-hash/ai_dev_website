@@ -3,7 +3,6 @@ import { clubInfo } from "../data/clubData";
 export default function PastEvents() {
   return (
     <div className="container py-5">
-      {/* Header Section */}
       <div className="text-center mb-5">
         <h1 className="display-4 fw-bold text-dark mb-3">
           Our Achievements & Past Events
@@ -14,11 +13,9 @@ export default function PastEvents() {
         </p>
       </div>
 
-      {/* Events Grid */}
       <div className="row g-4">
         {clubInfo.pastEvents.map((event) => (
           <div key={event.id} className="col-md-6 col-lg-4">
-            {/* Interactive Card */}
             <div
               className="card h-100 border-0 shadow-sm event-card"
               style={{
@@ -28,7 +25,6 @@ export default function PastEvents() {
               }}
             >
               <div className="card-body d-flex flex-column p-4">
-                {/* Date Badge */}
                 <span
                   className="badge rounded-pill bg-light text-primary fs-6 mb-3 align-self-start"
                   style={{ fontWeight: "600" }}
@@ -36,10 +32,8 @@ export default function PastEvents() {
                   📅 {event.date}
                 </span>
 
-                {/* Title */}
                 <h2 className="h4 fw-bold text-dark mb-3">{event.title}</h2>
 
-                {/* Description */}
                 <p className="card-text text-muted small flex-grow-1">
                   {event.description}
                 </p>
@@ -49,7 +43,6 @@ export default function PastEvents() {
         ))}
       </div>
 
-      {/* Custom CSS for Hover Effect (Injected) */}
       <style>
         {`
           .event-card:hover {
