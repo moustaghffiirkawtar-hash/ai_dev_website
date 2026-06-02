@@ -1,40 +1,163 @@
 export const clubInfo = {
   name: "AI & Dev Community",
   logo: "https://img.icons8.com/fluency/240/artificial-intelligence.png",
-  description: "Le Club AI & Dev Community est une initiative étudiante qui vise à promouvoir l’intelligence artificielle, le développement web et la culture numérique au sein de notre établissement.",
-  objectif: "Encourager l’apprentissage collaboratif, la créativité technologique et l’interdisciplinarité à travers des ateliers, des projets pratiques et des événements scientifiques. Le club constitue un cadre dynamique pour former les leaders technologiques de demain.",
+  description:
+    "Le Club AI & Dev Community est une initiative étudiante qui vise à promouvoir l’intelligence artificielle, le développement web et la culture numérique au sein de notre établissement.",
+  objectif:
+    "Encourager l’apprentissage collaboratif, la créativité technologique et l’interdisciplinarité à travers des ateliers, des projets pratiques et des événements scientifiques. Le club constitue un cadre dynamique pour former les leaders technologiques de demain.",
   fondatrice: "Prof. Sanaa El Filali",
-  conclusion: "Notre club n’est pas seulement un lieu de rencontre, mais un espace où les idées prennent vie et où chaque membre trouve l’inspiration pour se dépasser. Ensemble, nous avons prouvé que l’apprentissage et le partage peuvent transformer des passions en compétences concrètes.",
+  conclusion:
+    "Notre club n’est pas seulement un lieu de rencontre, mais un espace où les idées prennent vie et où chaque membre trouve l’inspiration pour se dépasser. Ensemble, nous avons prouvé que l’apprentissage et le partage peuvent transformer des passions en compétences concrètes.",
   members: [
     { role: "Marraine / Fondatrice", name: "Prof. Sanaa El Filali" },
     { role: "Président(e)", name: "[À compléter]" },
     { role: "Vice-Président(e)", name: "[À compléter]" },
     { role: "Secrétaire Général(e)", name: "[À compléter]" },
   ],
-  upcomingEvents: [
-    { id: 1, title: "Workshop : Création d’un Portfolio Professionnel", date: "6 Octobre 2025", location: "Centre orange - FSBM" },
-    { id: 2, title: "Journée d’Intégration", date: "18 Octobre 2025", location: "TD:1 - FSBM" },
-    { id: 3, title: "Atelier “AI & Strategy” – Caravan Wisdom 2025", date: "21 Octobre 2025", location: "ESCA" },
-    { id: 4, title: "Conférence : “L’art de se construire” - IA et AdTech", date: "17 Novembre 2025", location: "Amphi 8 - FSBM" },
-    { id: 5, title: "Formation Machine Learning", date: "21/22 Novembre 2025", location: "TD 16 - FSBM" },
-    { id: 6, title: "Atelier Développement Web & AI", date: "29 Novembre 2025", location: "Lycée Al Oula" },
-    { id: 7, title: "Mentorat -Tech", date: "20 Décembre 2025", location: "Amphi 4 - FSBM" },
-    { id: 8, title: "Formation Machine Learning 2025/2026", date: "Dates à venir", location: "En ligne" },
-  ],
   pastEvents: [
-    { id: 10, title: "Journées Portes Ouvertes", date: "19-21 Septembre 2024", description: "Rétrospective des projets réalisés en 2023-2024, démonstrations interactives en machine learning et ateliers d’initiation à Python." },
-    { id: 11, title: "Workshop Poster Scientifique 2024", date: "27 Septembre 2024", description: "Workshop avec Mme Laila El Jiani sur la création d’un poster scientifique, offrant une initiation pratique autour des technologies actuelles." },
-    { id: 12, title: "Formation Python 2024", date: "09-10 Octobre 2024", description: "Initiation au langage Python animée par M. Taoufik Amzil pour se familiariser avec les bases de la programmation." },
-    { id: 13, title: "PosterDay 2024 (PFA Day)", date: "16 Octobre 2024", description: "Organisé avec le Club Soft Skills autour du thème Révolutions par l’IA." },
-    { id: 14, title: "Collaboration avec Enactus ISPITS Casablanca", date: "11 Octobre 2024", description: "Partenariat et collaboration interclubs." },
-    { id: 15, title: "Table ronde: IA et détection du cancer du sein", date: "28 Octobre 2024", description: "Rôle de l’IA dans la détection précoce du cancer du sein, soulignant ses apports en analyse d’images et aide au diagnostic." },
-    { id: 16, title: "Formation Langue Chinoise", date: "Novembre 2024", description: "Découverte des bases de la langue stratégique pour encourager l’ouverture culturelle et les compétences linguistiques." },
-    { id: 17, title: "Conférence: AI & Ses domaines d’application", date: "09 Novembre 2024", description: "Applications concrètes de l’IA dans la santé, l’industrie et l’éducation." },
-    { id: 18, title: "Collaboration avec Huawei (CODE 212)", date: "Novembre 2025", description: "Formations certifiantes et accès à des ressources technologiques avancées en IA, cloud et technologies innovantes." },
-    { id: 19, title: "Opportunités de carrière avec Babel", date: "11 Novembre 2024", description: "Importance de Babel pour le développement web et les débouchés pour les développeurs front-end et full-stack." },
-    { id: 20, title: "Forum IT", date: "04 Décembre 2025", description: "Échange avec des professionnels du numérique et découverte d’opportunités de stages et d’emploi." },
-    { id: 21, title: "Digital Women", date: "13 Mars 2025", description: "Journée de codage dédiée aux femmes pour encourager leur participation et promouvoir l’égalité dans le secteur tech." },
-    { id: 22, title: "Compétition: Diginov 2025", date: "22 Avril 2025", description: "Compétition à l’UH1 FST Settat pour mettre en avant les compétences en innovation digitale." },
-    { id: 23, title: "Échange culturel Maroc-Chine", date: "24 Avril 2025", description: "Échange culturel et scientifique organisé à la FSBM." },
-  ]
+    {
+      id: 1,
+      title: "Machine Learning Training 2025/2026",
+      date: "september 23, 2025",
+      location: "Online",
+    },
+    {
+      id: 2,
+      title: "Tech Mentorship",
+      date: "December 20, 2025",
+      location: "Amphi 4 - FSBM",
+    },
+    {
+      id: 3,
+      title: "IT Forum",
+      date: "December 04, 2025",
+      description:
+        "Exchange with digital professionals and discovery of internship and job opportunities.",
+    },
+    {
+      id: 4,
+      title: "Web Development & AI Workshop",
+      date: "November 29, 2025",
+      location: "Lycée Al Oula",
+    },
+    {
+      id: 5,
+      title: "Machine Learning Training",
+      date: "November 21-22, 2025",
+      location: "TD 16 - FSBM",
+    },
+    {
+      id: 6,
+      title: "Collaboration with Huawei (CODE 212)",
+      date: "November 2025",
+      description:
+        "Certified training and access to advanced technological resources in AI, cloud, and innovative technologies.",
+    },
+    {
+      id: 7,
+      title: "Conference: The Art of Building Yourself - AI & AdTech",
+      date: "November 17, 2025",
+      location: "Amphi 8 - FSBM",
+    },
+    {
+      id: 8,
+      title: "AI & Strategy Workshop – Caravan Wisdom 2025",
+      date: "October 21, 2025",
+      location: "ESCA",
+    },
+    {
+      id: 9,
+      title: "Integration Day",
+      date: "October 18, 2025",
+      location: "TD:1 - FSBM",
+    },
+    {
+      id: 10,
+      title: "Workshop: Creating a Professional Portfolio",
+      date: "October 6, 2025",
+      location: "Orange Center - FSBM",
+    },
+    {
+      id: 11,
+      title: "Morocco-China Cultural Exchange",
+      date: "April 24, 2025",
+      description: "Cultural and scientific exchange organized at FSBM.",
+    },
+    {
+      id: 12,
+      title: "Competition: Diginov 2025",
+      date: "April 22, 2025",
+      description:
+        "Competition at UH1 FST Settat to showcase skills in digital innovation.",
+    },
+    {
+      id: 13,
+      title: "Digital Women",
+      date: "March 13, 2025",
+      description:
+        "Coding day dedicated to women to encourage their participation and promote equality in the tech sector.",
+    },
+    {
+      id: 14,
+      title: "Career Opportunities with Babel",
+      date: "November 11, 2024",
+      description:
+        "Importance of Babel for web development and opportunities for front-end and full-stack developers.",
+    },
+    {
+      id: 15,
+      title: "Conference: AI & Its Application Domains",
+      date: "November 09, 2024",
+      description:
+        "Concrete applications of AI in health, industry, and education.",
+    },
+    {
+      id: 16,
+      title: "Chinese Language Training",
+      date: "November 2024",
+      description:
+        "Discovering the basics of a strategic language to encourage cultural openness and linguistic skills.",
+    },
+    {
+      id: 17,
+      title: "Round Table: AI and Breast Cancer Detection",
+      date: "October 28, 2024",
+      description:
+        "Role of AI in early detection of breast cancer, highlighting its contributions in image analysis and diagnostic support.",
+    },
+    {
+      id: 18,
+      title: "PosterDay 2024 (PFA Day)",
+      date: "October 16, 2024",
+      description:
+        "Organized with the Soft Skills Club around the theme 'Revolutions by AI'.",
+    },
+    {
+      id: 19,
+      title: "Collaboration with Enactus ISPITS Casablanca",
+      date: "October 11, 2024",
+      description: "Partnership and inter-club collaboration.",
+    },
+    {
+      id: 20,
+      title: "Python Training 2024",
+      date: "October 09-10, 2024",
+      description:
+        "Introduction to the Python language led by Mr. Taoufik Amzil to familiarize students with programming basics.",
+    },
+    {
+      id: 21,
+      title: "Scientific Poster Workshop 2024",
+      date: "September 27, 2024",
+      description:
+        "Workshop with Mrs. Laila El Jiani on creating a scientific poster, offering practical initiation around current technologies.",
+    },
+    {
+      id: 22,
+      title: "Open Doors Days",
+      date: "September 19-21, 2024",
+      description:
+        "Retrospective of projects realized in 2023-2024, interactive demonstrations in machine learning, and Python initiation workshops.",
+    },
+  ],
 };
