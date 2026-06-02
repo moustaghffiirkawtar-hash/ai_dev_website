@@ -1,69 +1,90 @@
 import "./index.css";
-import { BrowserRouter, Routes, Route, NavLink, Link } from "react-router-dom";
+import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom";
 import Home from "./pages/Home.jsx";
 import UpcomingEvents from "./pages/UpcomingEvents.jsx";
 import ListOfMembers from "./pages/ListeOfMembers.jsx";
 import Contact from "./pages/Contact.jsx";
 import PastEvents from "./pages/PastEvents.jsx";
-import Button from "./components/Button.jsx";
 import About from './pages/About'; 
+
 const routes = [
-
   { path: "/", text: "Home", component: Home },
-  { path: "/About", text: "About", component: About },
-  { path: "/ListOfMembers", text: "List Of Members", component: ListOfMembers },
-  {
-    path: "/UpcomingEvents",
-    text: "Upcoming Events",
-    component: UpcomingEvents,  
+  { path: "/about", text: "About", component: About },
+  { path: "/list-of-members", text: "Members", component: ListOfMembers },
+  { path: "/upcoming-events", text: "Upcoming", component: UpcomingEvents,  
   },
-  { path: "/PastEvents", text: "PastEvents", component: PastEvents },
-
-{ path: "/Contact", text: "Contact", component: Contact },
-  { path: "https://docs.google.com/forms/d/e/1FAIpQLSdu_abXzvs4gCvMcGVI3BvOTdo4Sn_tCop03G0CrhUkmEHYJA/viewform?urp=gmail_link", text: "join us", component: "" },
+  { path: "/past-events", text: "Past Events", component: PastEvents },
+  { path: "/contact", text: "Contact", component: Contact },
 ];
+
+// Lien dyal Google Forms mkhlin brra hit machi route dyal React
+const joinLink = "https://docs.google.com/forms/d/e/1FAIpQLSdu_abXzvs4gCvMcGVI3BvOTdo4Sn_tCop03G0CrhUkmEHYJA/viewform?urp=gmail_link";
 
 function App() {
   return (
     <BrowserRouter>
-      <nav className="navbar navbar-expand-lg club-navbar shadow-sm">
+      
+      {/* Navbar Légère (Light Mode) */}
+      <nav className="navbar navbar-expand-lg navbar-light bg-white border-bottom py-3">
         <div className="container">
           <NavLink
             to="/"
-            className="navbar-brand d-flex align-items-center gap-2"
+            className="navbar-brand d-flex align-items-center gap-2 fw-bold text-dark"
           >
             <img
               src="/img/logo.png"
               alt="AI & Dev Community Logo"
               style={{ width: "36px", height: "36px", objectFit: "contain" }}
             />
-            AI &amp; Dev Community
+            <span className="fs-5">AI & Dev Community</span>
           </NavLink>
 
-          <div className="navbar-nav ms-auto d-flex flex-row gap-1">
-            {routes.map(({ path, text }) => (
-              <NavLink
-                key={path}
-                to={path}
-                end={path === "/"}
-                className={({ isActive }) =>
-                  "nav-link" + (isActive ? " active" : "")
-                }
+          {/* Bouton Mobile (Burger menu) */}
+          <button className="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span className="navbar-toggler-icon"></span>
+          </button>
+
+          <div className="collapse navbar-collapse" id="navbarNav">
+            <div className="navbar-nav ms-auto d-flex align-items-center gap-1">
+              
+              {/* Les Routes normals dyal l-app */}
+              {routes.map(({ path, text }) => (
+                <NavLink
+                  key={path}
+                  to={path}
+                  end={path === "/"}
+                  className={({ isActive }) =>
+                    "nav-link px-3 py-2 rounded-3 " + (isActive ? "text-primary fw-semibold bg-light" : "text-secondary")
+                  }
+                >
+                  {text}
+                </NavLink>
+              ))}
+
+              {/* Bouton Join Us (Lien khariji) */}
+              <a 
+                href={joinLink} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="btn btn-primary px-4 py-2 rounded-pill ms-3 fw-bold shadow-sm"
               >
-                {text}
-              </NavLink>
-            ))}
+                Join Us 
+              </a>
+
+            </div>
           </div>
         </div>
       </nav>
 
-      <div className="container mt-4">
+      {/* Contenu principal avec un peu d'espace */}
+      <div className="container mt-5 mb-5">
         <Routes>
           {routes.map(({ path, component: Comp }) => (
             <Route key={path} path={path} element={<Comp />} />
           ))}
         </Routes>
       </div>
+      
     </BrowserRouter>
   );
 }
