@@ -2,7 +2,6 @@ import { clubInfo } from "../data/clubData";
 
 export default function About() {
   return (
-    // Fond général Blanc w Bleu khfif
     <div className="min-vh-100 py-5" style={{ backgroundColor: "#f8fafc" }}>
       <div className="container">
 
@@ -43,7 +42,7 @@ export default function About() {
           </div>
         </div>
 
-        {/* SECTION 2: Our Objectives (Bordure Light Blue ghir f Jnab l-ysar) */}
+        {/* SECTION 2: Our Objectives */}
         <div className="my-5 py-4">
           <h2 className="text-center fw-bold mb-5 fs-1 text-dark">Our Objectives</h2>
           <div className="row g-4">

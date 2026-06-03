@@ -21,7 +21,7 @@ export default function Contact() {
           {/* Title */}
           <h1 className="text-center mb-4 fw-bold text-dark">Contact Us</h1>
 
-          {/* Social Media Links avec Noms */}
+          {/* Social Media */}
           <div className="d-flex justify-content-center gap-4 mb-5">
             
             {/* Facebook Card */}
@@ -54,7 +54,7 @@ export default function Contact() {
 
           </div>
 
-          {/* Form Card (Rahi b7al b7al kifma kant) */}
+          {/* Form Card */}
           <div className="card shadow-lg border-0 rounded-3 p-4 p-md-5">
             <form onSubmit={handleSubmit}>
               {/* Name Field */}
