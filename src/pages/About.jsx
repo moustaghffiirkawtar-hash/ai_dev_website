@@ -2,118 +2,107 @@ import { clubInfo } from "../data/clubData";
 
 export default function About() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-indigo-950 py-16">
-      <div className="max-w-6xl mx-auto px-4 space-y-24">
-        <div className="text-center pt-10">
-          <h1 className="text-6xl md:text-7xl font-black mb-6 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 tracking-tight drop-shadow-lg">
+    // Fond général Blanc w Bleu khfif
+    <div className="min-vh-100 py-5" style={{ backgroundColor: "#f8fafc" }}>
+      <div className="container">
+
+        {/* HERO SECTION */}
+        <div className="text-center pt-5 pb-4">
+          <h1 className="display-3 fw-bold mb-3" style={{ color: "#3b82f6" }}>
             About Us
           </h1>
-          <p className="text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed">
-            Discover the history, vision, and values of the AI & Dev Community
-            Club.
+          <p className="fs-5 text-muted mx-auto" style={{ maxWidth: "600px" }}>
+            Discover the history, vision, and values of the AI &amp; Dev Community Club.
           </p>
         </div>
-        <div className="relative bg-white/5 backdrop-blur-xl p-12 rounded-3xl shadow-2xl border border-white/10 text-center overflow-hidden">
-          <div className="absolute top-0 right-0 w-64 h-64 bg-cyan-500 rounded-full filter blur-3xl opacity-20"></div>
-          <div className="absolute bottom-0 left-0 w-64 h-64 bg-indigo-500 rounded-full filter blur-3xl opacity-20"></div>
 
-          <div className="relative z-10 mb-10">
+        {/* SECTION 1: Godmother & History */}
+        <div className="card border-0 rounded-5 shadow-sm text-center p-5 my-5 bg-white">
+          
+          <div className="mb-4">
             <img
               src="./img/SanaaElfilali.png"
               alt="Sanaa El Filali"
-              style={{ width: "200px", height: "200px", borderRadius: "70%" }}
-              className="mx-auto w-48 h-48 bg-cyan-50 rounded-full p-3 mb-4 shadow-lg object-cover border-4 border-cyan-100"
+              className="rounded-circle shadow-sm"
+              style={{ width: "200px", height: "200px", objectFit: "cover", border: "4px solid #eff6ff" }}
             />
-            <h3 className="text-2xl font-bold text-slate-200">Our Godmother</h3>
-            <p className="text-cyan-400 font-extrabold text-2xl mt-3">
+            <h3 className="mt-4 fw-bold fs-4 text-dark">Our Godmother</h3>
+            <p className="fw-bold fs-5 mt-2" style={{ color: "#3b82f6" }}>
               {clubInfo.fondatrice}
             </p>
           </div>
 
-          <div className="relative z-10 max-w-3xl mx-auto">
-            <h2 className="text-4xl font-extrabold text-white mb-8 tracking-tight">
-              Our History
-            </h2>
-            <p className="text-slate-300 leading-relaxed mb-6 text-lg">
-              The AI & Dev Community Club, founded and led by Professor Sanaa El
-              Filali, experienced its first year of existence in 2023-2024, a
-              remarkable year characterized by a rapid increase in its
-              membership.
+          <div className="mx-auto" style={{ maxWidth: "800px" }}>
+            <h2 className="fw-bold mb-4 fs-2 text-dark">Our History</h2>
+            <p className="text-muted fs-6 lh-lg mb-3">
+              The AI &amp; Dev Community Club, founded and led by Professor Sanaa El Filali, experienced its first year of existence in 2023-2024, a remarkable year characterized by a rapid increase in its membership.
             </p>
-            <p className="text-slate-300 leading-relaxed text-lg">
-              From its very beginnings, the club has attracted passionate
-              members, united by exceptional collaboration and a shared
-              commitment to innovation. Together, they have put their talents
-              and expertise to work to achieve notable accomplishments, both
-              within the university and beyond.
+            <p className="text-muted fs-6 lh-lg">
+              From its very beginnings, the club has attracted passionate members, united by exceptional collaboration and a shared commitment to innovation. Together, they have put their talents and expertise to work to achieve notable accomplishments, both within the university and beyond.
             </p>
           </div>
         </div>
-        <div>
-          <h2 className="text-5xl font-extrabold text-center text-white mb-16 tracking-tight">
-            Our Objectives
-          </h2>
-          <div className="grid md:grid-cols-3 gap-10">
-            <div className="group bg-slate-800/50 backdrop-blur-md p-8 rounded-3xl border border-indigo-500/20 text-center transition-all duration-500 hover:bg-indigo-600 hover:border-indigo-400 hover:shadow-[0_20px_50px_rgba(79,70,229,0.4)] hover:-translate-y-4">
-              <div className="text-7xl mb-6 transition-transform duration-300 group-hover:scale-125 group-hover:rotate-12"></div>
-              <h3 className="text-2xl font-bold text-white mb-4">
-                Artificial Intelligence
-              </h3>
-              <p className="text-slate-300 group-hover:text-indigo-100 text-base leading-relaxed">
-                Promote research and development in the field of AI and Machine
-                Learning.
-              </p>
-            </div>
-            <div className="group bg-slate-800/50 backdrop-blur-md p-8 rounded-3xl border border-cyan-500/20 text-center transition-all duration-500 hover:bg-cyan-600 hover:border-cyan-400 hover:shadow-[0_20px_50px_rgba(34,211,238,0.4)] hover:-translate-y-4">
-              <div className="text-7xl mb-6 transition-transform duration-300 group-hover:scale-125 group-hover:rotate-12"></div>
-              <h3 className="text-2xl font-bold text-white mb-4">
-                Web Development
-              </h3>
-              <p className="text-slate-300 group-hover:text-cyan-100 text-base leading-relaxed">
-                Master software development technologies and create concrete
-                applications.
-              </p>
-            </div>
-            <div className="group bg-slate-800/50 backdrop-blur-md p-8 rounded-3xl border border-purple-500/20 text-center transition-all duration-500 hover:bg-purple-600 hover:border-purple-400 hover:shadow-[0_20px_50px_rgba(168,85,247,0.4)] hover:-translate-y-4">
-              <div className="text-7xl mb-6 transition-transform duration-300 group-hover:scale-125 group-hover:rotate-12"></div>
-              <h3 className="text-2xl font-bold text-white mb-4">
-                Digital Culture
-              </h3>
-              <p className="text-slate-300 group-hover:text-purple-100 text-base leading-relaxed">
-                Encourage interdisciplinarity and cultural openness through
-                scientific events.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div className="relative bg-slate-950 text-white p-14 rounded-3xl shadow-2xl text-center border border-indigo-500/30 overflow-hidden">
-          {/* Effets de lumière Néon */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-cyan-500 rounded-full filter blur-[100px] opacity-20"></div>
-          <div className="absolute top-0 right-0 w-72 h-72 bg-purple-600 rounded-full filter blur-[80px] opacity-20"></div>
 
-          <div className="relative z-10">
-            <h3 className="text-5xl font-extrabold mb-10 text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-blue-400">
+        {/* SECTION 2: Our Objectives (Bordure Light Blue ghir f Jnab l-ysar) */}
+        <div className="my-5 py-4">
+          <h2 className="text-center fw-bold mb-5 fs-1 text-dark">Our Objectives</h2>
+          <div className="row g-4">
+            
+            {/* Carte IA */}
+            <div className="col-md-4">
+              <div className="card h-100 rounded-4 text-start p-4 shadow-sm bg-white"
+                style={{ border: "0", borderLeft: "5px solid #bfdbfe", transition: "all 0.3s ease" }}
+                onMouseEnter={(e) => { e.currentTarget.style.transform = 'translateY(-5px)'; e.currentTarget.style.boxShadow = '0 10px 20px rgba(59, 130, 246, 0.15)'; e.currentTarget.style.borderLeftColor = '#3b82f6'; }}
+                onMouseLeave={(e) => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = 'none'; e.currentTarget.style.borderLeftColor = '#bfdbfe'; }}
+              >
+                <h3 className="fw-bold text-dark fs-4 mb-3">Artificial Intelligence</h3>
+                <p className="text-muted fs-6 mb-0">Promote research and development in the field of AI and Machine Learning.</p>
+              </div>
+            </div>
+
+            {/* Carte Dev */}
+            <div className="col-md-4">
+              <div className="card h-100 rounded-4 text-start p-4 shadow-sm bg-white"
+                style={{ border: "0", borderLeft: "5px solid #bfdbfe", transition: "all 0.3s ease" }}
+                onMouseEnter={(e) => { e.currentTarget.style.transform = 'translateY(-5px)'; e.currentTarget.style.boxShadow = '0 10px 20px rgba(59, 130, 246, 0.15)'; e.currentTarget.style.borderLeftColor = '#3b82f6'; }}
+                onMouseLeave={(e) => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = 'none'; e.currentTarget.style.borderLeftColor = '#bfdbfe'; }}
+              >
+                <h3 className="fw-bold text-dark fs-4 mb-3">Web Development</h3>
+                <p className="text-muted fs-6 mb-0">Master software development technologies and create concrete applications.</p>
+              </div>
+            </div>
+
+            {/* Carte Culture */}
+            <div className="col-md-4">
+              <div className="card h-100 rounded-4 text-start p-4 shadow-sm bg-white"
+                style={{ border: "0", borderLeft: "5px solid #bfdbfe", transition: "all 0.3s ease" }}
+                onMouseEnter={(e) => { e.currentTarget.style.transform = 'translateY(-5px)'; e.currentTarget.style.boxShadow = '0 10px 20px rgba(59, 130, 246, 0.15)'; e.currentTarget.style.borderLeftColor = '#3b82f6'; }}
+                onMouseLeave={(e) => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = 'none'; e.currentTarget.style.borderLeftColor = '#bfdbfe'; }}
+              >
+                <h3 className="fw-bold text-dark fs-4 mb-3">Digital Culture</h3>
+                <p className="text-muted fs-6 mb-0">Encourage interdisciplinarity and cultural openness through scientific events.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        {/* SECTION 3: Our Vision */}
+        <div className="card border-0 rounded-5 text-center text-white p-5 my-5 position-relative overflow-hidden" style={{ 
+            backgroundColor: "#1e3a8a",
+            boxShadow: "0 10px 30px rgba(30, 58, 138, 0.2)"
+          }}>
+          
+          <div className="position-relative" style={{ zIndex: "10" }}>
+            <h3 className="fw-bold mb-4 display-6 text-white">
               Our Vision
             </h3>
-            <p className="italic text-slate-300 max-w-4xl mx-auto text-xl leading-relaxed mb-12 drop-shadow-md">
-              "Our club is not just a meeting place, but a space where ideas
-              come to life and where every member finds the inspiration to push
-              their limits. Together, we have proven that learning and sharing
-              can transform passions into concrete skills. Every project, every
-              event has been an opportunity to grow and build a supportive and
-              dynamic network."
+            <p className="fst-italic mx-auto fs-5 lh-lg mb-0" style={{ maxWidth: "900px", color: "#bfdbfe" }}>
+              "Our club is not just a meeting place, but a space where ideas come to life and where every member finds the inspiration to push their limits. Together, we have proven that learning and sharing can transform passions into concrete skills. Every project, every event has been an opportunity to grow and build a supportive and dynamic network."
             </p>
-            <a
-              href="https://docs.google.com/forms/d/e/1FAIpQLSdu_abXzvs4gCvMcGVI3BvOTdo4Sn_tCop03G0CrhUkmEHYJA/viewform?urp=gmail_link"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="relative inline-flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white px-10 py-5 rounded-full font-extrabold text-xl transition-all duration-300 transform hover:scale-110 shadow-[0_0_40px_rgba(34,211,238,0.6)]"
-            >
-              <span>Join the Adventure</span>
-              <span className="text-2xl"></span>
-            </a>
           </div>
         </div>
+
       </div>
     </div>
   );
