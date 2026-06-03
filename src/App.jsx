@@ -1,4 +1,3 @@
-import "./index.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home.jsx";
 import UpcomingEvents from "./pages/UpcomingEvents.jsx";

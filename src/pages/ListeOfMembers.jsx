@@ -1,3 +1,5 @@
+import React from "react";
+
 function ListOfMembers() {
   const members = [
     {
@@ -43,8 +45,9 @@ function ListOfMembers() {
   return (
     <div className="container py-5">
       <div className="text-center mb-5">
-        {/* White Page, Blue Title */}
-        <h2 style={{ color: "var(--club-blue)" }}>Meet Our Team</h2>
+        <h2 className="fw-bold" style={{ color: "var(--club-blue)" }}>
+          Meet Our Team
+        </h2>
         <p className="text-muted">The people behind the AI & Dev Community</p>
       </div>
 
@@ -52,23 +55,38 @@ function ListOfMembers() {
         {members.map((member) => (
           <div className="col-12 col-sm-6 col-md-4 col-lg-3" key={member.name}>
             <div
-              className="card h-100 member-card"
+              className="card h-100 border-0 shadow-sm text-center py-4"
               onClick={() => handleMemberClick(member.name)}
               role="button"
               tabIndex={0}
               onKeyDown={(e) =>
                 e.key === "Enter" && handleMemberClick(member.name)
               }
-              aria-label={`View profile for ${member.name}, ${member.role}`}
+              // Optional: Simple hover effect
+              style={{ transition: "all 0.3s ease" }}
+              onMouseEnter={(e) => e.currentTarget.classList.add("shadow")}
+              onMouseLeave={(e) => e.currentTarget.classList.remove("shadow")}
             >
-              <div className="card-body d-flex flex-column justify-content-center align-items-center py-4">
+              <div className="card-body d-flex flex-column align-items-center">
                 <img
                   src={member.pic}
-                  className="member-avatar"
+                  className="rounded-circle mb-3 object-fit-cover"
+                  style={{ width: "120px", height: "120px" }}
                   alt={member.name}
                 />
-                <h5 className="member-name">{member.name}</h5>
-                <p className="member-role">{member.role}</p>
+
+                {/* Name: Bold and Blue (Branding) */}
+                <h5
+                  className="card-title fw-bold mb-1"
+                  style={{ color: "var(--club-blue)" }}
+                >
+                  {member.name}
+                </h5>
+
+                {/* Role: Uppercase, Small, Muted Gray (Exact match to image style) */}
+                <p className="card-text text-uppercase small text-muted fw-semibold mb-0">
+                  {member.role}
+                </p>
               </div>
             </div>
           </div>
